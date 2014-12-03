@@ -9,7 +9,7 @@
     <h2> Create an addition function that returns the sum of the two arguments</h2>
     <p>This is problem {{ number }}</p>
 
-        <form action='submitanswer' method='get'>
+        <form action='submitanswer' method='post'>
           <fieldset>
             <legend>Text input</legend>
             <p>
