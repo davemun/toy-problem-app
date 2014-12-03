@@ -9,7 +9,7 @@ router.get('/', function(req, res) {
 
 
 router.get('/*', function(req, res) {
-  res.render('problem'+req.path.slice(1), { title: 'Toy Problem '+req.path.slice(1) });
+  res.render('problem'+req.path.slice(1), { title: 'Toy Problem '+req.path.slice(1), number: 'number '+req.path.slice(1) });
 });
 
 router.post(function(req, res){

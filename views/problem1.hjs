@@ -5,11 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>{{ title }}</h1>
-    <h2> Create an addition function that returns the sum of the two arguments<p>
+    <h1>{{ title }} </h1>
+    <h2> Create an addition function that returns the sum of the two arguments</h2>
     <p>This is problem {{ number }}</p>
 
-        <form>
+        <form action='submitanswer' method='get'>
           <fieldset>
             <legend>Text input</legend>
             <p>
@@ -25,8 +25,8 @@
                       rows = "30"
                       cols = "100">Your answer here</textarea>
             </p>
-            <input type="submit" value="Submit Answer">
-            <input type="submit" value="Run function">
+            <input type="submit" value="Submit Answer" formaction='submit_answer'>
+            <input type="submit" value="Run function" formaction='test_function' >
             <p>Test Result: {{result}}<p>
           </fieldset>
         </form>
