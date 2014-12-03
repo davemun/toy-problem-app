@@ -6,6 +6,32 @@
   </head>
   <body>
     <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+    <h2> Create an addition function that returns the sum of the two arguments<p>
+    <p>This is problem {{ number }}</p>
+
+        <form>
+          <fieldset>
+            <legend>Text input</legend>
+            <p>
+              <label>Test args</label>
+              <input
+                     type = "text"
+                     id = "testArgs"
+                     value = "Insert test arguments"/>
+            </p>
+
+              <label>Answer box</label>
+              <textarea id = "myTextArea"
+                      rows = "30"
+                      cols = "100">Your answer here</textarea>
+            </p>
+            <input type="submit" value="Submit Answer">
+            <input type="submit" value="Run function">
+            <p>Test Result: {{result}}<p>
+          </fieldset>
+        </form>
+      </body>
+    </html>
+    <p>
   </body>
 </html>
