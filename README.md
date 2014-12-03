@@ -1,4 +1,6 @@
 toy-problem-app
 ===============
 
-Generates toy problems that are graded based on various factors.
+A server that responds with various toy problems. Each user response is graded on time complexity, readability, and other factors.
+
+
