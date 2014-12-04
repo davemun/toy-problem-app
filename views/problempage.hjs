@@ -3,9 +3,15 @@
   <head>
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
   </head>
+
   <body>
+    <script src="/models/problem-model.js"></script>
     <h1>{{ title }} </h1>
     <!-- <h2> {Create an addition function that returns the sum of the two arguments}</h2> -->
     <h3>{{description}}</h3>
@@ -52,18 +58,29 @@
 
             </p>
             <div class="btn-toolbar" role="toolbar">
-            <input class="btn btn-default" type="submit" value="Submit Answer" id='subans'>
+            <input class="btn btn-primary" type="submit" value="Submit Answer" id='subans'>
             <input class="btn btn-default" type="submit" value="Run function">
             </div>
             <p>Test Result: {{result}}<p>
           </fieldset>
         </form>
 
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <script src="/libraries/bootbox.min.js"></script>
 
+<<<<<<< HEAD
       <script src="/models/problem-model.js"></script>
       <script> $('.alert-dismissible').hide(); </script>
+=======
+        <div class="modal fade bs-example-modal-sm" id='myModal' tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+              This is your result
+            </div>
+          </div>
+        </div>
+
+        <script src="/libraries/bootbox.min.js"></script>
+
+>>>>>>> 51b0a10009cf3e2585ebd429e198f7982204eab8
 
       </body>
     </html>

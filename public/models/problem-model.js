@@ -1,3 +1,4 @@
+
 $("#solutionform").submit(function(e)
 {
     var postData = $(this).serializeArray();
@@ -32,5 +33,3 @@ $("#solutionform").submit(function(e)
     //e.unbind(); //unbind. to stop multiple form submit.
 });
 
-
- var url = "/problems";
