@@ -20,13 +20,13 @@
                      value = "Insert test arguments"/>
             </p>
               <!-- <p>var {{name}} = function(a,b){</p> -->
-              <label>Answer box</label>
+              <!-- <label>function name</label> -->
+              <div name= 'funcName'>{{name}}</div>
               <textarea id = "myTextArea"
                       rows = "30"
                       cols = "100"
-                      name = "answer">Your answer here</textarea>
-                      name = "answer"
-                      </textarea>
+                      name = "answer">var {{name}} = function (PARAMS){  BODY  }</textarea>
+
             </p>
             <input type="submit" value="Submit Answer">
             <input type="submit" value="Run function">
