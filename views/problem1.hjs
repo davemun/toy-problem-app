@@ -11,7 +11,7 @@
     <h3>{{description}}</h3>
     <p>Problem #{{number}}</p>
 
-        <form action="parser.js" method='post'>
+        <form action = 'parser.js' method='post' id='solutionform'>
           <fieldset>
             <legend>Workspace</legend>
             <p>
@@ -36,7 +36,7 @@
 
             </p>
             <div class="btn-toolbar" role="toolbar">
-            <input class="btn btn-default" type="submit" value="Submit Answer">
+            <input class="btn btn-default" type="submit" value="Submit Answer" id='subans'>
             <input class="btn btn-default" type="submit" value="Run function">
             </div>
             <p>Test Result: {{result}}<p>
@@ -44,7 +44,9 @@
         </form>
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="/libraries/bootbox.min.js"></script>
 
+      <script src="/models/problem-model.js"></script>
       </body>
     </html>
     <p>
