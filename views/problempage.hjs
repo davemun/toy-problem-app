@@ -59,10 +59,15 @@
       <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
       <strong>Incomplete!</strong> Some functions were incorrect! Try again!
     </div>
+
+    <div class="alert alert-danger alert-dismissible problem-failure" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <strong>Incomplete!</strong> Some functions were incorrect! Try again!
+    </div>
 <!-- BootStrap 3 alerts-->
 
   <div class="testResults">
-    
+
   </div>
 
 

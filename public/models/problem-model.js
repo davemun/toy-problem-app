@@ -10,21 +10,24 @@ $("#solutionform").submit(function(e)
         data : postData,
         success:function(data, textStatus, jqXHR)
         {
-            //empty out unit tests div  
+            //empty out unit tests div
             $('.testResults').html("");
-            
+
             //hide all overall progress alerts
             $('.problem-success').hide();
             $('.problem-incomplete').hide();
+            $('.problem-failure').hide();
 
             //show relevant progress alert
             if(data.status === "success"){
                 $('.problem-success').text(data.message).show();
             }else if(data.status === "incomplete"){
                 $('.problem-incomplete').text(data.message).show();
+            }else if(data.status === "failure"){
+                $('.problem-failure').text(data.message).show();
             }
 
-            
+
             //go through each unit test result and create+append that result to the test result section
             data.testProgress.forEach(function(testResult){
 
@@ -38,7 +41,7 @@ $("#solutionform").submit(function(e)
                 if(testResult[3] === "success"){
                     $(alert).addClass("alert-success").addClass("problem-success");
                 }else if(testResult[3] === "failure"){
-                    $(alert).addClass("alert-warning").addClass("problem-failure");
+                    $(alert).addClass("alert-danger").addClass("problem-failure");
                 }else if(testResult[3] === "error"){
                     $(alert).addClass("alert-danger").addClass("problem-error");
                 }
