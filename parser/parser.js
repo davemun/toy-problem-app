@@ -9,6 +9,3 @@ module.exports = {
             }
           }
 }
-
-// eval("var fn = function(){ blah1;blah2;blah3; }"); 
-// fn();
