@@ -7,6 +7,5 @@ module.exports = {
             }else{
                 res.send("correct answer!");
             }
-            res.send("good attempt!");
           }
 };
