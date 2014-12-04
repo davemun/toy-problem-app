@@ -31,7 +31,7 @@ $("#solutionform").submit(function(e)
             //go through each unit test result and create+append that result to the test result section
             data.testProgress.forEach(function(testResult){
 
-                var arguments = $('<div><strong>Input Arguments:</strong> '+testResult[0]+'</div>');
+                var arguments = $('<div><strong>Input Arguments:</strong> '+testResult[0].split(',').join(' , ')+'</div>');
                 var result = $('<div><strong>Actual Result:</strong> '+testResult[1]+'</div>');
                 var expectedResult = $('<div><strong>Expected Result:</strong> '+testResult[2]+'</div>');
                 var status = $('<div><strong>Status:</strong> '+testResult[3]+'</div>');
