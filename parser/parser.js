@@ -8,8 +8,6 @@ module.exports = {
             try{
                 eval(req.body.answer);
 
-            // console.log(testPage.tests);
-                  // console.log("blah")
                 for(var i = 0; i < testPage.tests.length; i++){
                   var result = eval(req.body.funcName+'.apply(null,'+JSON.stringify(testPage.tests[i].args)+')'),
                       expectedResult = testPage.tests[i].ans;
@@ -22,15 +20,17 @@ module.exports = {
                 }
 
             }catch(err){
+                 var status = "error";
                  testProgress[2] = "syntax error!";
                  res.send(
                   { testProgress: testProgress, 
                     message: "You passed "+successful+" out of "+testPage.tests.length+" tests!",
-                    status: testProgress[2]
+                    status: status
                   }
                  );
                  return;
             };
+
             //if they made it here all the tests completed without eval error
             for(var i = 0; i < testProgress.length; i++){
               if(testProgress[i][2] === "success"){
@@ -39,6 +39,7 @@ module.exports = {
             }
             
             var status = (successful == testPage.tests.length) ? "success" : "failure";
+            console.log(status);
             
             res.send(
               { testProgress: testProgress, 
