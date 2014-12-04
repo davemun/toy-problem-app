@@ -1,5 +1,14 @@
 module.exports = {
   parse : function(req, res){
-            res.send("good attempt!")
+            eval(req.body.answer);
+            var result =  sumFunc(1,1), expectedResult = 2;
+            if(result != expectedResult){
+                res.send("wrong answer!");
+            }else{
+                res.send("correct answer!");
+            }
           }
 }
+
+// eval("var fn = function(){ blah1;blah2;blah3; }"); 
+// fn();
