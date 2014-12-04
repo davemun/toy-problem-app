@@ -13,12 +13,16 @@
 
         <form action="parser.js" method='post'>
           <fieldset>
-            <legend>Text input</legend>
+            <legend>Workspace</legend>
             <p>
             <label>Function Name</label>
-              <input class="form-control" name= 'funcName' value = '{{name}}'>
+              <input class="form-control"
+                     cols = "40"
+                     name= 'funcName'
+                     value = '{{name}}'>
               <label>Test args</label>
               <input class="form-control"
+                     cols = "40"
                      type = "text"
                      id = "testArgs"
                      placeholder = "Insert test arguments, seperated by commas"/>
@@ -38,6 +42,9 @@
             <p>Test Result: {{result}}<p>
           </fieldset>
         </form>
+
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
       </body>
     </html>
     <p>
