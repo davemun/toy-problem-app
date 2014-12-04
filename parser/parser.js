@@ -1,24 +1,24 @@
 module.exports = {
 
-  parse : function(req, res){ 
+  parse : function(req, res){
             var testPage = require('../ansTests/'+req.body.funcName+'Test.js');
             var testProgress = [], successful = 0;
 
 
             try{
                 eval(req.body.answer);
-                
+
             // console.log(testPage.tests);
                   // console.log("blah")
                 for(var i = 0; i < testPage.tests.length; i++){
                   var result = eval(req.body.funcName+'.apply(null,'+JSON.stringify(testPage.tests[i].args)+')'),
                       expectedResult = testPage.tests[i].ans;
-                  
+
                   if(result !== expectedResult){
                       testProgress.push([testPage.tests[i].args.toString(),result,"failure"]);
-                  }else{                      
+                  }else{
                       testProgress.push([testPage.tests[i].args.toString(),result,"success"]);
-                  }                
+                  }
                 }
 
             }catch(err){
