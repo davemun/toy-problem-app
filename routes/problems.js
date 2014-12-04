@@ -17,10 +17,5 @@ router.post('/*', function(req, res){
   parser.parse(req, res);
 })
 
-router.get('/problems/giveans?', function(req, res){
-  console.log('post req received');
-  parser.parse(req, res);
-})
-
 
 module.exports = router;
