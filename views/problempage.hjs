@@ -17,22 +17,6 @@
     <h3>{{description}}</h3>
     <p>Problem #{{number}}</p>
 
-<!-- BootStrap 3 alerts-->
-    <div class="alert alert-success alert-dismissible problem-success" role="alert">
-      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <strong>Success!</strong> You passed all the tests! Congratulations!
-    </div>
-
-    <div class="alert alert-warning alert-dismissible problem-failure" role="alert">
-      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <strong>Incomplete!</strong> Some functions were incorrect! Try again!
-    </div>
-
-    <div class="alert alert-danger alert-dismissible problem-error" role="alert">
-      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <strong>Warning!</strong> Syntax/parser error! Check your function.</div>
-<!-- BootStrap 3 alerts-->
-
         <form action = 'parser.js' method='post' id='solutionform'>
           <fieldset>
             <legend>Workspace</legend>
@@ -64,6 +48,22 @@
             <p>Test Result: {{result}}<p>
           </fieldset>
         </form>
+
+<!-- BootStrap 3 alerts-->
+    <div class="alert alert-success alert-dismissible problem-success" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <strong>Success!</strong> You passed all the tests! Congratulations!
+    </div>
+
+    <div class="alert alert-warning alert-dismissible problem-failure" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <strong>Incomplete!</strong> Some functions were incorrect! Try again!
+    </div>
+
+    <div class="alert alert-danger alert-dismissible problem-error" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <strong>Warning!</strong> Syntax/parser error! Check your function.</div>
+<!-- BootStrap 3 alerts-->
 
 
       <script src="/models/problem-model.js"></script>
