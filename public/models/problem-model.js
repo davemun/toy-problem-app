@@ -9,9 +9,19 @@ $("#solutionform").submit(function(e)
         data : postData,
         success:function(data, textStatus, jqXHR)
         {
-            console.log('success')
-            alert(data)
-            console.log(data);
+            if(data.status === "success"){
+                $('.problem-success').text(data.message).show();
+                $('.problem-failure').hide();
+                $('.problem-error').hide();
+            }else if(data.status === "failure"){
+                $('.problem-success').hide();
+                $('.problem-failure').text(data.message).show();
+                $('.problem-error').hide();
+            }else if(data.status === "error"){
+                $('.problem-success').hide();
+                $('.problem-failure').hide();
+                $('.problem-error').text(data.message).show();
+            }
         },
         error: function(jqXHR, textStatus, errorThrown)
         {

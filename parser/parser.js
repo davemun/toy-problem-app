@@ -22,7 +22,13 @@ module.exports = {
                 }
 
             }catch(err){
-                 res.send([testProgress, "syntax error!"]);
+                 testProgress[2] = "syntax error!";
+                 res.send(
+                  { testProgress: testProgress, 
+                    message: "You passed "+successful+" out of "+testPage.tests.length+" tests!",
+                    status: testProgress[2]
+                  }
+                 );
                  return;
             };
             //if they made it here all the tests completed without eval error
@@ -31,6 +37,15 @@ module.exports = {
                 successful++;
               }
             }
-            res.send([testProgress, "You passed "+successful+" out of "+testPage.tests.length+" tests!"]);
+            
+            var status = (successful == testPage.tests.length) ? "success" : "failure";
+            
+            res.send(
+              { testProgress: testProgress, 
+                message: "You passed "+successful+" out of "+testPage.tests.length+" tests!",
+                status: status
+              }
+            );
+
           }
 };
