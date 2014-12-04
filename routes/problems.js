@@ -9,7 +9,14 @@ router.get('/', function(req, res) {
 
 
 router.get('/*', function(req, res) {
-  res.render('problem'+req.path.slice(1), { title: 'Toy Problem '+req.path.slice(1), number: 'number '+req.path.slice(1) , name: 'add' });
+
+  var num = req.path.slice(1);
+
+  res.render('problem'+ num, { title: 'Toy Problem '+ num,
+                                            number: num,
+                                            name: nameDescTups[num-1][0],
+                                            description: nameDescTups[num-1][1]
+                                          });
 });
 
 router.post('/*', function(req, res){
@@ -17,5 +24,11 @@ router.post('/*', function(req, res){
   parser.parse(req, res);
 })
 
+var nameDescTups = [
+                     ['add', 'Create an addition function that returns the sum of the two arguments']
+                   ];
+
 
 module.exports = router;
+
+

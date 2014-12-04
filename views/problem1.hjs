@@ -3,34 +3,38 @@
   <head>
     <title>{{ title }}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   </head>
   <body>
     <h1>{{ title }} </h1>
-    <h2> Create an addition function that returns the sum of the two arguments</h2>
-    <p>This is problem {{number}}</p>
+    <!-- <h2> {Create an addition function that returns the sum of the two arguments}</h2> -->
+    <h3>{{description}}</h3>
+    <p>Problem #{{number}}</p>
 
         <form action="parser.js" method='post'>
           <fieldset>
             <legend>Text input</legend>
             <p>
             <label>Function Name</label>
-              <input name= 'funcName' value = '{{name}}'>
+              <input class="form-control" name= 'funcName' value = '{{name}}'>
               <label>Test args</label>
-              <input
+              <input class="form-control"
                      type = "text"
                      id = "testArgs"
-                     value = "Insert test arguments"/>
+                     placeholder = "Insert test arguments, seperated by commas"/>
             </p>
               <!-- <p>var {{name}} = function(a,b){</p> -->
               <!-- <label>function name</label> -->
-              <textarea id = "myTextArea"
-                      rows = "30"
+              <textarea class="form-control" id = "myTextArea"
+                      rows = "15"
                       cols = "100"
                       name = "answer">var {{name}} = function (PARAMS){  BODY  }</textarea>
 
             </p>
-            <input type="submit" value="Submit Answer">
-            <input type="submit" value="Run function">
+            <div class="btn-toolbar" role="toolbar">
+            <input class="btn btn-default" type="submit" value="Submit Answer">
+            <input class="btn btn-default" type="submit" value="Run function">
+            </div>
             <p>Test Result: {{result}}<p>
           </fieldset>
         </form>
