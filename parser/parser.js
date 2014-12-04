@@ -16,14 +16,15 @@ module.exports = {
 
                       console.log('expectedResult', expectedResult);
 
-                  if(result !== expectedResult){
-                      testProgress.push([testPage.tests[i].args.toString(),result,expectedResult,"failure"]);
+                  if(JSON.stringify(result) !== JSON.stringify(expectedResult)){
+                      testProgress.push([JSON.stringify(testPage.tests[i].args),JSON.stringify(result),JSON.stringify(expectedResult),"failure"]);
                   }else{
-                      testProgress.push([testPage.tests[i].args.toString(),result,expectedResult,"success"]);
+                      testProgress.push([JSON.stringify(testPage.tests[i].args),JSON.stringify(result),JSON.stringify(expectedResult),"success"]);
                   }
+
               }catch(err){
                    var status = "error";
-                    testProgress.push([testPage.tests[i].args.toString(),"Syntax Error!",expectedResult,"error"]);
+                    testProgress.push([JSON.stringify(testPage.tests[i].args),"Syntax Error!",JSON.stringify(expectedResult),"error"]);
               };
             }
 
