@@ -23,8 +23,8 @@ module.exports = {
                  var status = "error";
                  testProgress[2] = "syntax error!";
                  res.send(
-                  { testProgress: testProgress, 
-                    message: "You passed "+successful+" out of "+testPage.tests.length+" tests!",
+                  { testProgress: testProgress,
+                    message: "You have a syntax error!",
                     status: status
                   }
                  );
@@ -37,12 +37,12 @@ module.exports = {
                 successful++;
               }
             }
-            
+
             var status = (successful == testPage.tests.length) ? "success" : "failure";
             console.log(status);
-            
+
             res.send(
-              { testProgress: testProgress, 
+              { testProgress: testProgress,
                 message: "You passed "+successful+" out of "+testPage.tests.length+" tests!",
                 status: status
               }
