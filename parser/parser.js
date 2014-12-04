@@ -1,9 +1,9 @@
 module.exports = {
   parse : function(req, res){
-            try{
+            console.log("funcName: "+req.body.funcName);   
+            try{    
                 eval(req.body.answer);
-                var result = eval('req.body.funcName(1,1)'), expectedResult = 2;
-                console.log("funcName: "+req.body.funcName);
+                var result = eval(req.body.funcName+'(1,1)'), expectedResult = 2;
             }catch(err){
                  res.send("syntax error!");
                  return;
