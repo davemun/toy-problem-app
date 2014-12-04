@@ -9,7 +9,7 @@
     <h2> Create an addition function that returns the sum of the two arguments</h2>
     <p>This is problem {{number}}</p>
 
-        <form method='post'>
+        <form method='post' action='giveans'>
           <fieldset>
             <legend>Text input</legend>
             <p>
@@ -19,11 +19,13 @@
                      id = "testArgs"
                      value = "Insert test arguments"/>
             </p>
-
+              <!-- <p>var {{name}} = function(a,b){</p> -->
               <label>Answer box</label>
               <textarea id = "myTextArea"
                       rows = "30"
-                      cols = "100">Your answer here</textarea>
+                      cols = "100"
+                      name = "answer"
+                      >var {{name}} = function(a,b){</textarea>
             </p>
             <input type="submit" value="Submit Answer">
             <input type="submit" value="Run function">

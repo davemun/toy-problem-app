@@ -1,5 +1,5 @@
 module.exports = {
   parse : function(req, res){
-            res.send("good attempt!")
+            res.send("good attempt!");
           }
-}
+};
