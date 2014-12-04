@@ -13,6 +13,8 @@
           <fieldset>
             <legend>Text input</legend>
             <p>
+            <label>Function Name</label>
+              <input name= 'funcName' placeholder = '{{name}}'>
               <label>Test args</label>
               <input
                      type = "text"
@@ -21,7 +23,6 @@
             </p>
               <!-- <p>var {{name}} = function(a,b){</p> -->
               <!-- <label>function name</label> -->
-              <div name= 'funcName'>{{name}}</div>
               <textarea id = "myTextArea"
                       rows = "30"
                       cols = "100"

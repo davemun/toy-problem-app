@@ -1,6 +1,6 @@
 module.exports = {
   parse : function(req, res){
-            try{    
+            try{
                 eval(req.body.answer);
                 var result = eval('req.body.funcName(1,1)'), expectedResult = 2;
                 console.log("funcName: "+req.body.funcName);
