@@ -6,7 +6,7 @@ test3.r2 = Math.random();
 
 //test2.rAns = test2.r1 + test2.r2;
 
-test2.tests = [{
+test3.tests = [{
     args:[[
       [1,2,3],
       [4,5,6],
