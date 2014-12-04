@@ -14,7 +14,7 @@
             <legend>Text input</legend>
             <p>
             <label>Function Name</label>
-              <input name= 'funcName' placeholder = '{{name}}'>
+              <input name= 'funcName' value = '{{name}}'>
               <label>Test args</label>
               <input
                      type = "text"
