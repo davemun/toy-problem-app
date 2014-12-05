@@ -46,8 +46,8 @@
             </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Sign in</a></li>
-            <li><a href="#">Sign out</a></li>
+            <li><a href="#">Sign In</a></li>
+            <li><a href="#">Sign Up</a></li>
               </ul>
             </li>
           </ul>
@@ -110,8 +110,9 @@
     </div>
 <!-- BootStrap 3 alerts-->
   </br>
-  <div class="testResults">
-
+  <div class="hero-unit">
+    <div class="testResults">
+    </div>
   </div>
 
 

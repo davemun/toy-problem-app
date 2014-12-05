@@ -100,6 +100,10 @@ $("#testfunc").click(function(e)
         },
         error: function(jqXHR, textStatus, errorThrown)
         {
+          $('.testResults').html("");
+          $('.problem-success').hide();
+          $('.problem-incomplete').hide();
+          $('.problem-failure').hide();
           $( ".test" ).remove();
           var alert = $('<div class="alert  alert-dismissible" role="alert"></div>');
           var arguments = $('<div><strong>Syntax Error</strong></div>');

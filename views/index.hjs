@@ -45,8 +45,8 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Sign in</a></li>
-          <li><a href="#">Sign out</a></li>
+          <li><a href="#">Sign In</a></li>
+          <li><a href="#">Sign Up</a></li>
             </ul>
           </li>
         </ul>
@@ -91,5 +91,15 @@
         </div>
       </div>
     </div>
+
+    </br></br></br></br></br></br></br>
+    <!-- footer -->
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">
+        Made by <a href="https://github.com/roryc89"><strong>Rory Campbell</strong></a> and <a href="https://github.com/davemun"><strong>Dave Mun</strong></a> for <a href="https://github.com/hackreactor"><strong>Hack Reactor</strong></a>.</p>
+      </div>
+    </div>
+
   </body>
 </html>
