@@ -66,8 +66,7 @@ $("#subans").click(function(e)
 $("#testfunc").click(function(e)
 {
     var postData = $('#solutionform').serializeArray();
-    postData.push({"name": "test", "value": "true"});
-    console.log(postData);    
+    postData.push({"name": "test", "value": "true"});   
     var formURL = "/problems";
     $.ajax(
     {

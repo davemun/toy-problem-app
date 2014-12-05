@@ -1,18 +1,36 @@
 module.exports = {
 
   parse : function(req, res){
-          console.log(req.body);
-
             //test function
             if(req.body.test){
               try{
-                  eval(req.body.answer);
-                  console.log("test.args==================");
-                  console.log(req.body.testArgs.split(','));
-                  console.log("test.body==================");
                   console.log(req.body);
-                  var result = eval(req.body.funcName+'.apply(null,'+args+')');
+                  console.log("1");
+                  eval(req.body.answer);
+                  console.log("2");
 
+                  testArr = [1,2];
+                  console.log("3");
+
+                  //turn ints in array into num from string
+                  // for (var i = 0; i < testArr.length; i++) {
+                  //   if(!isNaN(testArr[i])){
+                  //     testArr[i] = parseInt(testArr[i]);
+                  //   }
+                  // }
+
+                  //console.log("test.args2==================");
+                  // console.log(testArr);
+                  // console.log(JSON.stringify(testArr));
+                  console.log("4");
+
+
+                  console.log(req.body.funcName+'.call(null,'+testArr+')');
+
+                  var result = eval(req.body.funcName+'.apply(null,'+testArr+')');
+                  console.log('result');
+
+                  console.log("5");
                   res.send(
                     { 
                       testFunc: true,
@@ -20,9 +38,11 @@ module.exports = {
                       result: result
                     } 
                   );                   
+                  console.log("6");
 
               }catch(err){
                 console.log("in catch");  
+                console.log(err); //BODY is not defined
                   res.send(
                     { 
                       testFunc: true,
