@@ -33,11 +33,14 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Problems <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/problems/1">#1 Addition</a></li>
-              <li><a href="/problems/2">#2 Prime Tester</a></li>
-              <li><a href="/problems/3">#3 Spiral Traversal</a></li>
-              <li class="divider"></li>
-              <li><a href="#">This does nothing</a></li>
+                <li><a href="/problems/1">#1 Addition</a></li>
+                <li><a href="/problems/2">#2 Prime Tester</a></li>
+                <li><a href="/problems/3">#3 Spiral Traversal</a></li>
+                <li><a href="/problems/4">#4 All Anagrams</a></li>
+                <li><a href="/problems/">#5 Coming soon</a></li>
+                <li><a href="/problems/">#6 Coming soon</a></li>
+                <li class="divider"></li>
+                <li><a href="#">This does nothing yet</a></li>
             </ul>
           </li>
         </ul>
@@ -52,7 +55,41 @@
   </nav>
 
   <!-- End of Nav bar -->
-    <h1>The Toy Problem App</h1>
-    <p>Test your coding skills on the problems provided</p>
+
+
+
+    <div class="container" class="text-center">
+      <h1 class="text-center">The Toy Problem App</h1>
+      <p class="text-center">Test your coding skills on the problems provided</p>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-lg btn-group-justified btn-group-fill-height">
+
+          <a href="/problems/1" class="btn btn-default" role="button">
+            <strong>Addition</strong><br>
+            <span>Add two args</span>
+          </a>
+          <a href="/problems/2" class="btn btn-default" role="button">
+            <strong>Prime Tester</strong><br>
+            <span>Check if arg is Prime</span>
+          </a>
+          <a href="/problems/3" class="btn btn-default" role="button">
+            <strong>Spiral Traversal</strong><br>
+            <span>Get elements from a matrix</span>
+          </a>
+          <a href="/problems/4" class="btn btn-default" role="button">
+            <strong>All Anagrams</strong><br>
+            <span>Find all unique anagrams</span>
+          </a>
+          <a href="/problems/" class="btn btn-default" role="button">
+            <strong>Q5</strong><br>
+            <span>Coming soon</span>
+          </a>
+          <a href="/problems/" class="btn btn-default" role="button">
+            <strong>Q6</strong><br>
+            <span>Coming soon</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
