@@ -37,9 +37,9 @@
                 <li><a href="/problems/1">#1 Addition</a></li>
                 <li><a href="/problems/2">#2 Prime Tester</a></li>
                 <li><a href="/problems/3">#3 Spiral Traversal</a></li>
-                <li><a href="/problems/3">#4 All Anagrams</a></li>
-                <li><a href="/problems/3">#5 Coming soon</a></li>
-                <li><a href="/problems/3">#6 Coming soon</a></li>
+                <li><a href="/problems/4">#4 All Anagrams</a></li>
+                <li><a href="/problems/">#5 Coming soon</a></li>
+                <li><a href="/problems/">#6 Coming soon</a></li>
                 <li class="divider"></li>
                 <li><a href="#">This does nothing yet</a></li>
               </ul>
@@ -58,7 +58,7 @@
     <!-- End of Nav bar -->
 
 
-    <h1>{{ title }} </h1>
+    <h1>{{ title }} : {{name}} </h1>
     <!-- <h2> {Create an addition function that returns the sum of the two arguments}</h2> -->
     <h4>{{description}} </h4><br><br>
 
