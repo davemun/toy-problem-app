@@ -1,6 +1,39 @@
 module.exports = {
 
   parse : function(req, res){
+          console.log(req.body);
+
+            //test function
+            if(req.body.test){
+              try{
+                  eval(req.body.answer);
+                  console.log("test.args==================");
+                  console.log(req.body.testArgs.split(','));
+                  console.log("test.body==================");
+                  console.log(req.body);
+                  var result = eval(req.body.funcName+'.apply(null,'+args+')');
+
+                  res.send(
+                    { 
+                      testFunc: true,
+                      testArgs: args,
+                      result: result
+                    } 
+                  );                   
+
+              }catch(err){
+                console.log("in catch");  
+                  res.send(
+                    { 
+                      testFunc: true,
+                      testArgs: args,
+                      result: "Syntax Error!"
+                    } 
+                  );
+              }
+              return;
+          }else{
+            //submit function
             var testPage = require('../ansTests/'+req.body.funcName+'Test.js');
             var testProgress = [], successful = 0;
 
@@ -47,5 +80,6 @@ module.exports = {
             );
 
           }
+        }
 };
-//0: null1: null2: "syntax error!
+
