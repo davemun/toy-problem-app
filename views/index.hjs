@@ -52,7 +52,40 @@
   </nav>
 
   <!-- End of Nav bar -->
-    <h1>The Toy Problem App</h1>
-    <p>Test your coding skills on the problems provided</p>
+
+
+
+    <div class="container" class="text-center">
+      <h1 class="text-center">The Toy Problem App</h1>
+      <p class="text-center">Test your coding skills on the problems provided</p>
+      <div class="btn-toolbar" role="toolbar">
+        <div class="btn-group btn-group-lg btn-group-justified btn-group-fill-height">
+          <a href="#" class="btn btn-default" role="button">
+            <strong>Addition</strong><br>
+            <span>Add two args</span>
+          </a>
+          <a href="#" class="btn btn-default" role="button">
+            <strong>Prime Tester</strong><br>
+            <span>Check if arg is Prime</span>
+          </a>
+          <a href="#" class="btn btn-default" role="button">
+            <strong>Spiral Traversal</strong><br>
+            <span>Get elements from a matrix</span>
+          </a>
+          <a href="#" class="btn btn-default" role="button">
+            <strong>Q4</strong><br>
+            <span>Summary</span>
+          </a>
+          <a href="#" class="btn btn-default" role="button">
+            <strong>Q5</strong><br>
+            <span>Summary</span>
+          </a>
+          <a href="#" class="btn btn-default" role="button">
+            <strong>Q6</strong><br>
+            <span>Summary</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
