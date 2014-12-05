@@ -33,11 +33,14 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Problems <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li><a href="/problems/1">#1 Addition</a></li>
-              <li><a href="/problems/2">#2 Prime Tester</a></li>
-              <li><a href="/problems/3">#3 Spiral Traversal</a></li>
-              <li class="divider"></li>
-              <li><a href="#">This does nothing</a></li>
+                <li><a href="/problems/1">#1 Addition</a></li>
+                <li><a href="/problems/2">#2 Prime Tester</a></li>
+                <li><a href="/problems/3">#3 Spiral Traversal</a></li>
+                <li><a href="/problems/4">#4 All Anagrams</a></li>
+                <li><a href="/problems/">#5 Coming soon</a></li>
+                <li><a href="/problems/">#6 Coming soon</a></li>
+                <li class="divider"></li>
+                <li><a href="#">This does nothing yet</a></li>
             </ul>
           </li>
         </ul>
@@ -73,16 +76,16 @@
             <span>Get elements from a matrix</span>
           </a>
           <a href="#" class="btn btn-default" role="button">
-            <strong>Q4</strong><br>
-            <span>Summary</span>
+            <strong>All Anagrams</strong><br>
+            <span>Find all unique anagrams</span>
           </a>
           <a href="#" class="btn btn-default" role="button">
             <strong>Q5</strong><br>
-            <span>Summary</span>
+            <span>Coming soon</span>
           </a>
           <a href="#" class="btn btn-default" role="button">
             <strong>Q6</strong><br>
-            <span>Summary</span>
+            <span>Coming soon</span>
           </a>
         </div>
       </div>

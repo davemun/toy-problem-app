@@ -37,8 +37,11 @@
                 <li><a href="/problems/1">#1 Addition</a></li>
                 <li><a href="/problems/2">#2 Prime Tester</a></li>
                 <li><a href="/problems/3">#3 Spiral Traversal</a></li>
+                <li><a href="/problems/3">#4 All Anagrams</a></li>
+                <li><a href="/problems/3">#5 Coming soon</a></li>
+                <li><a href="/problems/3">#6 Coming soon</a></li>
                 <li class="divider"></li>
-                <li><a href="#">This does nothing</a></li>
+                <li><a href="#">This does nothing yet</a></li>
               </ul>
             </li>
           </ul>

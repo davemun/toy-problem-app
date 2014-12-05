@@ -1,9 +1,6 @@
 
 var test2 = {};
 
-test2.r1 = Math.random();
-test2.r2 = Math.random();
-
 test2.rAns = test2.r1 + test2.r2;
 
 test2.tests = [{
