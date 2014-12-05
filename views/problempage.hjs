@@ -76,7 +76,8 @@
                      cols = "40"
                      type = "text"
                      id = "testArgs"
-                     placeholder = "Insert test arguments, seperated by commas"/>
+                     placeholder = "Insert test arguments, seperated by commas"
+                     name = "testArgs"/>
             </p>
               <!-- <p>var {{name}} = function(a,b){</p> -->
               <!-- <label>function name</label> -->
@@ -88,7 +89,7 @@
             </p>
             <div class="btn-toolbar" role="toolbar">
             <input class="btn btn-primary" type="submit" value="Submit Answer" id='subans'>
-            <input class="btn btn-default" type="submit" value="Run function">
+            <input class="btn btn-default" type="submit" value="Test Function" id='testfunc'>
             </div>
             <!-- <p>Test Result: {{result}}<p> -->
           </fieldset>
@@ -108,7 +109,7 @@
       <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
     </div>
 <!-- BootStrap 3 alerts-->
-
+  </br>
   <div class="testResults">
 
   </div>

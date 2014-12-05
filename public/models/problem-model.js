@@ -1,7 +1,8 @@
 
-$("#solutionform").submit(function(e)
+$("#subans").click(function(e)
 {
-    var postData = $(this).serializeArray();
+    console.log('inside subans');
+    var postData = $('#solutionform').serializeArray();
     var formURL = "/problems";
     $.ajax(
     {
@@ -17,6 +18,7 @@ $("#solutionform").submit(function(e)
             $('.problem-success').hide();
             $('.problem-incomplete').hide();
             $('.problem-failure').hide();
+
 
             //show relevant progress alert
             if(data.status === "success"){
@@ -51,6 +53,46 @@ $("#solutionform").submit(function(e)
 
             });
 
+        },
+        error: function(jqXHR, textStatus, errorThrown)
+        {
+            console.log('error')
+        }
+    });
+    e.preventDefault(); //STOP default action
+    //e.unbind(); //unbind. to stop multiple form submit.
+});
+
+$("#testfunc").click(function(e)
+{
+    var postData = $('#solutionform').serializeArray();
+    postData.push({"name": "test", "value": "true"});
+    console.log(postData);    
+    var formURL = "/problems";
+    $.ajax(
+    {
+        url : formURL,
+        type: "POST",
+        data : postData,
+        success:function(data, textStatus, jqXHR)
+        {
+            //empty out unit tests div
+            $('.testResults').html("");
+
+            //hide all overall progress alerts
+            $('.problem-success').hide();
+            $('.problem-incomplete').hide();
+            $('.problem-failure').hide();
+
+            //if single run test function
+            if(data.testFunc){
+                var alert = $('<div class="alert  alert-dismissible" role="alert"></div>');
+                var arguments = $('<div><strong>Input Arguments:</strong> '+data.testArgs.split(',').join(' , ')+'</div>');
+                var result = $('<div><strong>Actual Result:</strong> '+data.result+'</div>');
+                $(alert).append([arguments, result]);
+                $(alert).addClass("alert-info").addClass("problem-incomplete");
+                $(alert).appendTo('.testResults');
+            }
         },
         error: function(jqXHR, textStatus, errorThrown)
         {
