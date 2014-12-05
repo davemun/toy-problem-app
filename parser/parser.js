@@ -5,12 +5,9 @@ module.exports = {
             if(req.body.test){
               try{
                   console.log(req.body);
-                  console.log("1");
                   eval(req.body.answer);
-                  console.log("2");
 
-                  testArr = [1,2];
-                  console.log("3");
+                  testArr = req.body.testArgs;
 
                   //turn ints in array into num from string
                   // for (var i = 0; i < testArr.length; i++) {
@@ -22,33 +19,29 @@ module.exports = {
                   //console.log("test.args2==================");
                   // console.log(testArr);
                   // console.log(JSON.stringify(testArr));
-                  console.log("4");
 
 
                   console.log(req.body.funcName+'.call(null,'+testArr+')');
 
-                  var result = eval(req.body.funcName+'.apply(null,'+testArr+')');
-                  console.log('result');
+                  var result = eval(req.body.funcName+'.call(null,'+testArr+')');
 
-                  console.log("5");
                   res.send(
-                    { 
+                    {
                       testFunc: true,
-                      testArgs: args,
+                      testArgs: testArr,
                       result: result
-                    } 
-                  );                   
-                  console.log("6");
+                    }
+                  );
 
               }catch(err){
-                console.log("in catch");  
+                console.log("in catch");
                 console.log(err); //BODY is not defined
                   res.send(
-                    { 
+                    {
                       testFunc: true,
                       testArgs: args,
                       result: "Syntax Error!"
-                    } 
+                    }
                   );
               }
               return;

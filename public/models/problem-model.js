@@ -66,7 +66,7 @@ $("#subans").click(function(e)
 $("#testfunc").click(function(e)
 {
     var postData = $('#solutionform').serializeArray();
-    postData.push({"name": "test", "value": "true"});   
+    postData.push({"name": "test", "value": "true"});
     var formURL = "/problems";
     $.ajax(
     {
@@ -84,10 +84,15 @@ $("#testfunc").click(function(e)
             $('.problem-failure').hide();
 
             //if single run test function
-            if(data.testFunc){
+            if(data.result === "Syntax Error!"){
+
+              console.log('Syntax error on test')
+
+            }else if(data.testFunc){
+
                 var alert = $('<div class="alert  alert-dismissible" role="alert"></div>');
                 var arguments = $('<div><strong>Input Arguments:</strong> '+data.testArgs.split(',').join(' , ')+'</div>');
-                var result = $('<div><strong>Actual Result:</strong> '+data.result+'</div>');
+                var result = $('<div><strong>Result:</strong> '+data.result+'</div>');
                 $(alert).append([arguments, result]);
                 $(alert).addClass("alert-info").addClass("problem-incomplete");
                 $(alert).appendTo('.testResults');
@@ -95,7 +100,14 @@ $("#testfunc").click(function(e)
         },
         error: function(jqXHR, textStatus, errorThrown)
         {
-            console.log('error')
+          $( ".test" ).remove();
+          var alert = $('<div class="alert  alert-dismissible" role="alert"></div>');
+          var arguments = $('<div><strong>Syntax Error</strong></div>');
+          var result = $('<div><strong>Check code and arguments</strong> </div>');
+          $(alert).append([arguments, result]);
+          $(alert).addClass("alert-info").addClass("test");
+          $(alert).appendTo('.testResults');
+          console.log('error')
         }
     });
     e.preventDefault(); //STOP default action
