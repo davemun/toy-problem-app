@@ -25,8 +25,12 @@ app.run(function($rootScope, $location) {
 // create the controller and inject Angular's $scope
 app.controller('mainController', ['$scope', '$location', 'Descriptions', function($scope, $location, Descriptions) {
     var problemName = $location.path().split('/').pop();
-    $scope.name = problemName;
+    //check to see if url exists
+    if(!Descriptions[problemName]){
+        $scope.error = true;
+    }
     $scope.desc = Descriptions[problemName];
+    $scope.name = problemName;
 }]);
 
 app.factory('Descriptions', function($http) {
