@@ -14,7 +14,7 @@ module.exports = {
                     res.send(
                     {
                       testFunc: true,
-                      testArgs: "None,",
+                      testArgs: "None",
                       result: "No arguments defined!"
                     });
                   }
