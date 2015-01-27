@@ -28,7 +28,7 @@ $("#subans").click(function(e)
                 $('.problem-failure').text(data.message).show();
             }
 
-
+            console.log(data.testProgress);
             //go through each unit test result and create+append that result to the test result section
             data.testProgress.forEach(function(testResult){
 
@@ -37,7 +37,7 @@ $("#subans").click(function(e)
                 var expectedResult = $('<div><strong>Expected Result:</strong> '+testResult[2]+'</div>');
                 var status = $('<div><strong>Status:</strong> '+testResult[3]+'</div>');
 
-                var alert = $('<div class="alert  alert-dismissible" role="alert"></div>');
+                var alert = $('<div class="alert alert-dismissible result" role="alert"></div>');
 
                 if(testResult[3] === "success"){
                     $(alert).addClass("alert-success").addClass("problem-success");
@@ -49,7 +49,7 @@ $("#subans").click(function(e)
 
                 $(alert).append([arguments, result, expectedResult, status]);
                 $(alert).appendTo('.testResults');
-
+                $('.result').show();
             });
 
         },
