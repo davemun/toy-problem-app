@@ -1,0 +1,57 @@
+    <h1> Toy Problem : {{name}} </h1>
+    <!-- <h2> {Create an addition function that returns the sum of the two arguments}</h2> -->
+    <h4>{{ desc }} </h4><br><br>
+
+        <form  method='post' id='solutionform'>
+          <fieldset>
+            <legend>Workspace</legend>
+            <p>
+            <label>Function Name</label>
+              <input class="form-control"
+                     cols = "40"
+                     name= 'funcName'
+                     value = '{{name}}'>
+              <label>Test args</label>
+              <input class="form-control"
+                     cols = "40"
+                     type = "text"
+                     id = "testArgs"
+                     placeholder = "Insert test arguments, seperated by commas"
+                     name = "testArgs"/>
+            </p>
+              <!-- <p>var {{name}} = function(a,b){</p> -->
+              <!-- <label>function name</label> -->
+              <textarea class="form-control" id = "myTextArea"
+                      rows = "15"
+                      cols = "100"
+                      name = "answer">var {{name}} = function (PARAMS){  BODY  }</textarea>
+
+            </p>
+            <div class="btn-toolbar" role="toolbar">
+            <input class="btn btn-primary" type="submit" value="Submit Answer" id='subans'>
+            <input class="btn btn-default" type="submit" value="Test Function" id='testfunc'>
+            </div>
+            <!-- <p>Test Result: {{result}}<p> -->
+          </fieldset>
+        </form>
+
+<!-- BootStrap 3 alerts-->
+    <div class="alert alert-success alert-dismissible problem-success" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <!-- <strong>Success!</strong> You passed all the tests! Congratulations! -->
+    </div>
+
+    <div class="alert alert-warning alert-dismissible problem-incomplete" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    </div>
+
+    <div class="alert alert-danger alert-dismissible problem-failure" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    </div>
+<!-- BootStrap 3 alerts-->
+  </br>
+  <div class="jumbotron">
+    <div class="testResults">
+    </div>
+  </div>
+

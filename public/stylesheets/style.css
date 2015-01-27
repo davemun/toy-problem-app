@@ -25,3 +25,7 @@ a {
   height: 60px;
   background-color: #f5f5f5;
 }
+
+.alert-dismissible {
+  display: none;
+}
