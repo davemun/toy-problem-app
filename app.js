@@ -5,8 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
-var users = require('./routes/users');
+// var routes = require('./routes/index');
+// var users = require('./routes/users');
 var problems = require('./routes/problems');
 
 var app = express();
@@ -25,7 +25,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // app.use('/', routes);
 // app.use('/users', users);
-// app.use('/problems', problems);
+
+//parse problem answer submissions
+app.use('/problems', problems);
+
 app.get('/', function(req, res) {
   res.sendfile('./index.html');
 });

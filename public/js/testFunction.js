@@ -1,7 +1,6 @@
 
 $("#subans").click(function(e)
 {
-    console.log('inside subans');
     var postData = $('#solutionform').serializeArray();
     var formURL = "/problems";
     $.ajax(

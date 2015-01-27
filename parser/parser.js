@@ -1,6 +1,7 @@
 module.exports = {
 
   parse : function(req, res){
+            console.log(req.body);
             //test function
             if(req.body.test){
               try{
