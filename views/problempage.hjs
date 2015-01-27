@@ -110,7 +110,7 @@
     </div>
 <!-- BootStrap 3 alerts-->
   </br>
-  <div class="hero-unit">
+  <div class="jumbotron">
     <div class="testResults">
     </div>
   </div>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+    <script src="angular-script.js"></script>
+  </head>
+
+
+  <body>
+  <!-- Nav bar -->
+<header>
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Toy problem</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li ><a class="active" href="/">Home <span class="sr-only">(current)</span></a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Problems <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="/problems/1">#1 Addition</a></li>
+              <li><a href="/problems/2">#2 Prime Tester</a></li>
+              <li><a href="/problems/3">#3 Spiral Traversal</a></li>
+              <li><a href="/problems/4">#4 All Anagrams</a></li>
+              <li><a href="/problems/">#5 Coming soon</a></li>
+              <li><a href="/problems/">#6 Coming soon</a></li>
+              <li class="divider"></li>
+              <li><a href="#">This does nothing yet</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Sign In</a></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</header>
+  <!-- End of Nav bar -->
+
+
+  <!-- MAIN CONTENT AND INJECTED VIEWS -->
+  <div ng-view>
+
+      <!-- angular templating -->
+      <!-- this is where content will be injected -->
+
+  </div>
+ 
+
+<!-- footer -->
+<div class="footer">
+  <div class="container">
+    <p class="text-muted">
+    Made by <a href="https://github.com/roryc89"><strong>Rory Campbell</strong></a> and <a href="https://github.com/davemun"><strong>Dave Mun</strong></a> for <a href="https://github.com/hackreactor"><strong>Hack Reactor</strong></a>.</p>
+  </div>
+</div>
+
+  </body>
+</html>
