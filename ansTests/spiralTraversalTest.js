@@ -1,12 +1,10 @@
 
-var test3 = {};
+var testSuite = {};
 
-test3.r1 = Math.random();
-test3.r2 = Math.random();
+testSuite.r1 = Math.random();
+testSuite.r2 = Math.random();
 
-//test2.rAns = test2.r1 + test2.r2;
-
-test3.tests = [{
+testSuite.tests = [{
     args:[[
       [1,2,3],
       [4,5,6],
@@ -32,12 +30,12 @@ test3.tests = [{
   },
   {
     args:[[
-      [1,2,3,test3.r1],
-      [4,5,6,test3.r2],
+      [1,2,3,testSuite.r1],
+      [4,5,6,testSuite.r2],
       [7,8,9,15]
     ]],
-    ans: [1, 2, 3, test3.r1, test3.r2, 15, 9, 8, 7, 4, 5, 6]
+    ans: [1, 2, 3, testSuite.r1, testSuite.r2, 15, 9, 8, 7, 4, 5, 6]
   }
 ];
 
-module.exports = test3;
+module.exports = testSuite;

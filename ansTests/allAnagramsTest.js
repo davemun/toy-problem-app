@@ -1,6 +1,6 @@
-var test2 = {};
+var testSuite = {};
 
-test2.tests = [{
+testSuite.tests = [{
     args:['abc'],
     ans: ['abc', 'acb', 'bac', 'bca', 'cab', 'cba']
   },
@@ -34,4 +34,4 @@ test2.tests = [{
   }
 ];
 
-module.exports = test2;
+module.exports = testSuite;
