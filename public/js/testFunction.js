@@ -89,12 +89,13 @@ $("#testfunc").click(function(e)
 
             }else if(data.testFunc){
 
-                var alert = $('<div class="alert  alert-dismissible" role="alert"></div>');
+                var alert = $('<div class="alert  alert-dismissible result" role="alert"></div>');
                 var arguments = $('<div><strong>Input Arguments:</strong> '+data.testArgs.split(',').join(' , ')+'</div>');
                 var result = $('<div><strong>Result:</strong> '+data.result+'</div>');
                 $(alert).append([arguments, result]);
                 $(alert).addClass("alert-info").addClass("problem-incomplete");
                 $(alert).appendTo('.testResults');
+                $('.result').show();
             }
         },
         error: function(jqXHR, textStatus, errorThrown)
@@ -104,12 +105,13 @@ $("#testfunc").click(function(e)
           $('.problem-incomplete').hide();
           $('.problem-failure').hide();
           $( ".test" ).remove();
-          var alert = $('<div class="alert  alert-dismissible" role="alert"></div>');
+          var alert = $('<div class="alert  alert-dismissible result" role="alert"></div>');
           var arguments = $('<div><strong>Syntax Error</strong></div>');
           var result = $('<div><strong>Check code and arguments</strong> </div>');
           $(alert).append([arguments, result]);
           $(alert).addClass("alert-info").addClass("test");
           $(alert).appendTo('.testResults');
+          $('.result').show();
           console.log('error')
         }
     });

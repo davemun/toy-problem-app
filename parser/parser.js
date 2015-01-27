@@ -10,6 +10,15 @@ module.exports = {
 
                   testArr = req.body.testArgs;
 
+                  if(testArr === ""){
+                    res.send(
+                    {
+                      testFunc: true,
+                      testArgs: "None,",
+                      result: "No arguments defined!"
+                    });
+                  }
+
                   //turn ints in array into num from string
                   // for (var i = 0; i < testArr.length; i++) {
                   //   if(!isNaN(testArr[i])){
