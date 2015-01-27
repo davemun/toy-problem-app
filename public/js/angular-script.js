@@ -15,6 +15,11 @@ app.config(function($routeProvider) {
             templateUrl: 'pages/partials/problems.html',
             controller  : 'mainController'
         })
+
+        // route for the about us page
+        .when('/about', {
+            templateUrl: 'pages/partials/about.html',
+        })
 });
 
 //expose $location in $rootScope
