@@ -1,0 +1,5 @@
+<h1>Oops! Something went wrong!</h1>
+
+<h2>{{ message }}</h2>
+<h2>{{ error.status }}</h2>
+<pre>{{ error.stack }}</pre>
